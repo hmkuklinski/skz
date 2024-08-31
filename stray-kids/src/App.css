@@ -1,0 +1,323 @@
+*{
+  box-sizing:border-box;
+  margin:0px;
+  
+}
+
+/*general elements for listed items, links, and buttons */
+li, a, button {
+  font: 16px Arial,Helvetica, sans-serif;
+  font-weight:500px;
+  color: #3b98af;
+  text-decoration:none;
+}
+
+ul {
+  list-style:none;
+}
+
+
+/*--------------general body formatting ----------------------*/
+body {
+  background-color:#ffffff;
+  color: #000;;
+  font: normal 16px Arial, Helvetica, sans-serif;
+  line-height: 1.6em;
+  margin-left:10px; 
+  overflow-x:hidden; 
+}
+
+.container {
+  display:flex; 
+  padding-top: 20px;
+  flex-wrap:wrap;
+  gap:1em;
+}
+.skz-subtitle{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin: 20px;
+  padding: 10px;
+}
+
+/* ------------------ member about section -------------------*/
+.member-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin: 20px;
+  width: 90%;
+}
+/*landing --> member-container and options*/
+.landing{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2px;
+  margin: 10px 0px;
+  height: auto;
+}
+
+/*card --> member photo, background, links*/
+#card{
+  width: 95%;
+  height: auto;
+}
+/*image formatting for div and img ------*/
+.member-image{
+  margin: 5px;
+}
+.skz-logo{
+  width: 12%;
+  margin: 0;
+}
+
+.member-image img{
+  height: 380px;
+  width: 220px;
+}
+.member-socials{
+  margin: 5px;
+  height: 150px;
+  text-align: center;
+}
+.member-description{
+  margin-top: 20px;
+  height: 180px;
+}
+
+.member-skzoo, .member-player, .member-insta{
+  width: 200px;
+  height: 100px;
+}
+.member-skzoo img, .member-player img, .member-insta img{
+  width: 180px;
+  height: 100px;
+}
+
+/* for member selection options ----------------*/
+.menu, .member-socials{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.member-socials{
+  align-items: flex-start;
+  /* justify-content: space-evenly; */
+}
+.menu{
+  width: 95%;
+  flex-wrap:wrap;
+  margin: 0px 20px 10px 10px;
+  padding: 15px;
+}
+.menu img{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+.menu-member, .menu-member-inactive{
+  margin: 0px 15px;
+  padding: 3px;
+  cursor:pointer;
+}
+.menu-member-inactive{
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
+}
+.menu-member img{
+  border: 2px solid blue;
+}
+
+.member-info{
+  margin: 0px 13px 0px 0px;
+  padding: 12px;
+  height: 100%;
+  width: 70%;
+  font-size: 15px;
+}
+
+/* ------------------blog editing----------------------------*/
+#blog {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  padding: 40px;
+  border-bottom: 1px solid black;
+}
+
+.blog-heading {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  padding-bottom: 20px;
+
+}
+
+.blog-heading span {
+  color: #f33c3c;
+  margin-bottom: 10px;
+}
+
+.blog-heading h3 {
+  font-size: 2.4em;
+  color: #2b2b2b;
+  font: 16px Arial, Helvetica, sans-serif bold;
+
+}
+
+.blog-container {
+  display:flex;
+  justify-content: center;
+  align-items: flex;
+  margin: 40px 0;
+  padding: 20px;
+  flex-wrap:wrap;
+}
+
+.blog-box {
+  Width: 350px;
+  border-radius:12px;
+  background-color:#fff;
+  border: 1px solid #ececec;
+  margin: 20px;
+  margin-bottom: 50px;
+  
+}
+.blog-box:hover{
+  cursor:pointer;
+}
+
+.blog-img {
+  width: 100%;
+  height:auto;
+}
+
+.blog-img > img {
+  width:100%;
+  width: 100%;
+  max-height: 200px;
+  max-width: 350px;
+  object-fit:cover;
+  object-position:cover;
+}
+
+.blog-text {
+  padding: 20px;
+  display:flex;
+  flex-direction: column;
+
+}
+
+.blog-text span {
+  color:f33c3c;
+  font-size: 12px;
+}
+
+.line{
+  background-color: #e32636;
+  height: 2px;
+  width: 50%;
+  margin-top:10px;
+}
+
+.blog-text .blog-title {
+  font-size: 18px;
+  font-weight:500;
+  color: #272727;
+}
+
+.blog-text .blog-title:hover {
+  color: #e32636;
+}
+
+.blog-text .blog-title:active {
+  color: #67dd33;
+}
+
+.blog-text p {
+  color:#969696;
+  font-size:14px;
+  display:-webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  margin: 20px 0px;
+
+}
+
+.blog-text a{
+  color:#0f0f0f;
+}
+
+.blog-text a:hover {
+  color:#e32636;
+}
+
+.blog-text a:active {
+  color:#67dd33;
+}
+
+.see-blog {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.see-blog ion-icon{
+  color:#e32636;
+  margin-left: 7px;
+}
+
+@media (max-width: 1250px) {
+  .blog-box {
+      width: 300px;
+  }
+
+}
+
+@media (max-width: 700px){
+  .skz-logo, .member-image{
+    display:none;
+  }
+  .panel{
+    height: 450px;
+    max-width: 200px;
+  }
+  .member-image img{
+    width:200px;
+  }
+  .member-socials{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 550px;
+  }
+  .menu{
+    display:none;
+  }
+  .member-info{
+    width: 90%;
+    text-align: center;
+  }
+  .member-skzoo, .member-player, .member-insta{
+    margin: 30px 0px;
+  }
+  .member-skzoo img, .member-player img, .member-insta img {
+    width: 200px;
+    height:120px;
+  }
+  .landing{
+    margin: 0;
+    padding: 0;
+  }
+  #card{
+    width: 90%;
+  }
+}
