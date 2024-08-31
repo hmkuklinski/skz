@@ -14,6 +14,31 @@ li, a, button {
 
 ul {
   list-style:none;
+  display:inline-flex;
+}
+
+/* ----------------------- navbar ----------------------------*/
+.nav-bar{
+  display:inline-flex;
+  background-color: blue;
+}
+.nav-links{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  gap: 25px;
+  background-color: rgba(255, 255, 255);
+  width: 100%;
+  height: 100px;
+  z-index: 2;
+}
+.nav-links li{
+  padding: 5px;
+}
+.nav-links li a{
+  font-size: 22px;
 }
 
 
@@ -49,6 +74,7 @@ body {
   padding: 8px;
   margin: 20px;
   width: 90%;
+  transition: background-image 0.4s ease-in, opacity 0.5s ease-in;
 }
 /*landing --> member-container and options*/
 .landing{
@@ -57,7 +83,7 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: 2px;
-  margin: 10px 0px;
+  margin: 120px 0px 10px 0px;
   height: auto;
 }
 
@@ -151,7 +177,7 @@ body {
   height: 320px;
   width: 50%;
   font-size: 16px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.24);
   border-radius: 12px;
 }
 
@@ -343,5 +369,8 @@ body {
   }
   #card{
     width: 90%;
+  }
+  .nav-links li a{
+    font-size: 18px;
   }
 }

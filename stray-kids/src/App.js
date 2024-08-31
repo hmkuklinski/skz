@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import BlogEntry from './BlogEntry.js';
 import MemberCard from './MemberCard.js';
 
+
 function App() {
   const bangchan = {
     img: "/bangchan.png",
@@ -197,7 +198,8 @@ function App() {
   const [seungminActive, setSeungminActive] = useState(false);
   const [maknaeActive, setMaknaeActive] = useState(false);
 
-  function changeMember(mem){
+  function changeMember(event, mem){
+    event.preventDefault();
     setCurrentMember(mem);
     mem === 'bangchan'? setBangchanActive(true):setBangchanActive(false);
     mem === 'leeknow' ? setLeeknowActive(true): setLeeknowActive(false);
@@ -214,11 +216,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <nav class="navbar">
-            <h1 class="logo">Stray Kids</h1>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Members</a></li>
-                <li><a href="#">Contact</a></li>
+              <div className="navbar-logo">
+                <img src="https://1000logos.net/wp-content/uploads/2020/02/Stray-Kids-Logo.png" alt="skz-logo" height="95px" width="250px"/>
+              </div>
+                <li><a href="/">Home</a></li>
+                <li><a href="#members">Members</a></li>
+                <li><a href="#news">News</a></li>
                 <li class="button"><a href="#">Login</a></li>
             </ul>
         </nav>
@@ -240,34 +244,34 @@ function App() {
           </div>
           <div className="menu">
             <div className={bangchanActive? "menu-member": "menu-member-inactive"}>
-              <img src="https://i.pinimg.com/originals/b7/4f/e6/b74fe630995665067f8088b2472ce245.png" alt="bangchan" onClick={()=>changeMember("bangchan")} />
+              <img src="https://i.pinimg.com/originals/b7/4f/e6/b74fe630995665067f8088b2472ce245.png" alt="bangchan" onClick={(event)=>changeMember(event, "bangchan")} />
             </div>
             <div className={leeknowActive? "menu-member": "menu-member-inactive"}>
-              <img src="https://i.pinimg.com/736x/ab/7e/1b/ab7e1bf340f90946c487c2017003f405.jpg" alt="leeknow" onClick={()=>changeMember("leeknow")} />
+              <img src="https://i.pinimg.com/736x/ab/7e/1b/ab7e1bf340f90946c487c2017003f405.jpg" alt="leeknow" onClick={(event)=>changeMember(event, "leeknow")} />
             </div>
             <div className={changbinActive? "menu-member": "menu-member-inactive"}>
-              <img src="https://64.media.tumblr.com/7cebe984774ef2e0a8b0e4b3ce4d3c11/c1bc2df6f5b0ef05-2a/s250x400/ada943afc358644eabb3ecad7f3af2b768083ec5.jpg" alt="changbin" onClick={()=>changeMember("changbin")} />
+              <img src="https://64.media.tumblr.com/7cebe984774ef2e0a8b0e4b3ce4d3c11/c1bc2df6f5b0ef05-2a/s250x400/ada943afc358644eabb3ecad7f3af2b768083ec5.jpg" alt="changbin" onClick={(event)=>changeMember(event,"changbin")} />
             </div>
             <div className={hyunjinActive? "menu-member": "menu-member-inactive"}>
-              <img src="https://i.pinimg.com/736x/f0/9c/24/f09c24739acafbd3ae5f04c4fb80a50e.jpg" alt="hyunjin"  onClick={()=>changeMember("hyunjin")}/>
+              <img src="https://i.pinimg.com/736x/f0/9c/24/f09c24739acafbd3ae5f04c4fb80a50e.jpg" alt="hyunjin"  onClick={(event)=>changeMember(event, "hyunjin")}/>
             </div>
             <div className={jisungActive? "menu-member": "menu-member-inactive"}>
-              <img src="https://i.pinimg.com/736x/d8/57/10/d8571083fc40d489aa8db235601d9b9d.jpg" alt="jisung" onClick={()=>changeMember("jisung")}/>
+              <img src="https://i.pinimg.com/736x/d8/57/10/d8571083fc40d489aa8db235601d9b9d.jpg" alt="jisung" onClick={(event)=>changeMember(event, "jisung")}/>
             </div>
             <div className={felixActive? "menu-member": "menu-member-inactive"}>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP7evvY5LjPfJG0jjUTkxPRsTgwVxnmvY6B9gNgHpibb-AbspXFJLgMdQjUZyxcTJj2RY&usqp=CAU" alt="felix" onClick={()=>changeMember("felix")} />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP7evvY5LjPfJG0jjUTkxPRsTgwVxnmvY6B9gNgHpibb-AbspXFJLgMdQjUZyxcTJj2RY&usqp=CAU" alt="felix" onClick={(event)=>changeMember(event, "felix")} />
             </div>
             <div className={seungminActive? "menu-member": "menu-member-inactive"}>
-              <img src="https://64.media.tumblr.com/179721f5bfc0971564bfe9988cd8de46/82cfaa4514e90fc6-19/s640x960/e9389fee5ac8b595bb44fad929bf4cbdcaf32113.jpg" alt="seungmin" onClick={()=>changeMember("seungmin")} />
+              <img src="https://64.media.tumblr.com/179721f5bfc0971564bfe9988cd8de46/82cfaa4514e90fc6-19/s640x960/e9389fee5ac8b595bb44fad929bf4cbdcaf32113.jpg" alt="seungmin" onClick={(event)=>changeMember(event, "seungmin")} />
             </div>
             <div className={maknaeActive? "menu-member": "menu-member-inactive"}>
-              <img src="https://64.media.tumblr.com/08d49379a9fc219959949671687617a8/c1a44f1b4aa52818-86/s640x960/ba42a1547b648a077d934799a56265bf362429a7.jpg" alt="I.N." onClick={()=>changeMember("maknae")} />
+              <img src="https://64.media.tumblr.com/08d49379a9fc219959949671687617a8/c1a44f1b4aa52818-86/s640x960/ba42a1547b648a077d934799a56265bf362429a7.jpg" alt="I.N." onClick={(event)=>changeMember(event, "maknae")} />
             </div>
           </div>
         </div>
         <div className="blog">
           <div className="skz-subtitle">
-            <h1>Stray Kids News</h1>
+            <h1 id="news">Stray Kids News</h1>
           </div>
           <div className="blog-container">
             <BlogEntry imgsrc={"https://www.rollingstone.com/wp-content/uploads/2024/07/stray-kids.jpg?w=1227&h=920&crop=1"} title={"Deadpool and Wolverine- newest Stray Kids Members?"} date={"August 19th, 2024"} prev={"The friendship of Ryan Reynolds and Bangchan leads to a Deadpool and Wolverine cameo in the Chk Chk Boom MV."} article={"https://www.rollingstone.com/music/music-news/ryan-reynolds-hugh-jackman-stray-kids-chk-chk-boom-video-1235063806/"} sub={"Hannah Kuklinski"} />
