@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     element: <Blog />,
   },
   {
-    path: "/albums",
+    path: "/music",
     element: <Albums/>,
   }
 ]);

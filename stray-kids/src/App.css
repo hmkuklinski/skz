@@ -18,9 +18,8 @@ ul {
 }
 
 /* ----------------------- navbar ----------------------------*/
-.nav-bar{
+.navbar{
   display:inline-flex;
-  background-color: blue;
 }
 .nav-links{
   display:flex;
@@ -317,13 +316,195 @@ body {
 }
 
 /* ------------albums formatting --------------------*/
-.albums-container{
+.albums-container, .album-container, .albums,.album-cover, 
+.filter-menu,.album-info, .albums-main-container, .menu-option,
+.preview-container {
   display:flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 50px;
 }
+/*button formatting for view button and filter buttons*/
+.albums-main-container button{
+  border-radius: 30px;
+  height: 50px;
+  width: 80px;
+  cursor:pointer;
+  border: 1px solid black;
+  color:black;
+}
+
+.album-cover, .album-info, .albums-container{
+  margin-top: 0;
+}
+
+/* for the Albums label and filter selection buttons*/
+.filter-menu{
+  flex-direction: row;
+  height: 100px;
+  width: 80%;
+}
+.a-title, .menu-option{
+  height: 60px;
+  width: 90px;
+}
+.a-title{
+  width: 40%;
+  height: 70px;
+  padding: 10px;
+}
+.a-title h2{
+  font-size: 38px;
+  text-align:left;
+  margin: 10px 0px;
+}
+/*div container for all filter buttons*/
+.filter-buttons{
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin: 0px 15px;
+  padding: 4px;
+}
+.filter-info{
+  text-align:left;
+}
+/*div container for each filter button*/
+.menu-option{
+  margin: 0px 7px;
+  width: 50%;
+}
+
+/*div container for all the albums*/
+.albums{
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 95%;
+  margin-top: 20px;
+  padding: 6px;
+}
+/*div container for each album*/
+.album-container{
+  border-radius: 12px;
+  border: 1px solid gray;
+  width: 260px;
+  box-shadow: 7px 4px 4px;
+  height: 350px;
+  padding: 2px 8px;
+  margin:10px;
+  cursor: pointer;
+}
+/*for album cover image div and img*/
+.album-cover{
+  height: 200px;
+  width: 200px;
+  /* background-color: #e32636; */
+  border-radius: 4px;
+}
+.album-cover img{
+  height: 180px;
+  width: 180px;
+}
+.album-title{
+  margin: 3px 5px;
+}
+/*div for years and view album button*/
+.album-selections{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row;
+  padding: 4px;
+  width: 85%;
+}
+.album-year{
+  font-size: 10px;
+  width: 100px;
+  text-align: center;
+  margin: 0px 15px;
+  background-color: pink;
+}
+/* when view-album button is present --> check if want to keep
+.album-year, .view-album{
+  margin: 0px 15px;
+} */
+.heading{
+  margin-top: 50px;
+}
+
+
+/*------------------------album preview/additional info section -----------*/
+.preview-container{ /*for both album info and album cover and title*/
+  background-color: blueviolet;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 90%;
+  height: 700px;
+  margin-top: 10px;
+  
+}
+/*left == song info and .album-preview-container is for album cover and title display on right*/
+.left, .album-preview-container{
+  width: 45%;
+  min-height: 450px;
+  max-height: 650px;
+  margin: 10px;
+  padding: 7px;
+}
+/*for album title*/
+.info-title{
+  margin: 6px 0px;
+  height: 40px;
+}
+/*for song number, title, duration*/
+.song-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 35px;
+  font-size: 21px;
+  text-align: center;
+  background-color: #969696;
+  margin: 10px 0px;
+  cursor:pointer;
+}
+.song-number, .song-title, .song-duration{
+  margin: 0px 10px;
+}
+.song-number{
+  width: 15%;
+}
+.song-title{
+  width:60%;
+}
+.song-duration{
+  width: 15%;
+}
+.songs-list{
+  height: auto;
+  padding: 3px;
+}
+.album-preview-container,.preview-cover, .info-title{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.preview-cover, .preview-cover img{
+  height: 90%;
+  width: 80%;
+  margin: 12px 15px;
+}
+.info-title h3{
+  font-size: 32px;
+}
+
 
 
 /* ----------- Mobile/Media formatting ---------*/
@@ -384,5 +565,19 @@ body {
   }
   .nav-links li a{
     font-size: 18px;
+  }
+  .filter-menu{
+    display:none;
+  }
+  .preview-container{
+    flex-direction: column;
+    height: auto;
+    margin: 15px 2px;
+  }
+  .left, .album-preview-container{
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin: 15px;
   }
 }

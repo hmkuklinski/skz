@@ -8,7 +8,7 @@ export default function NavBar(){
           <img src="https://1000logos.net/wp-content/uploads/2020/02/Stray-Kids-Logo.png" alt="skz-logo" height="95px" width="250px"/>
         </div>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/albums">Albums</Link></li>
+        <li><Link to="/music">Music</Link></li>
         <li><Link to="/news">News</Link></li>
         <li><Link to="/photocards">Photocards</Link></li>
       </ul>
