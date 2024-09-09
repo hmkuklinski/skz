@@ -2,8 +2,8 @@ import {Link} from "react-router-dom";
 
 export default function NavBar(){
   return (
-    <nav class="navbar">
-      <ul class="nav-links">
+    <nav className="navbar">
+      <ul className="nav-links">
         <div className="navbar-logo">
           <img src="https://1000logos.net/wp-content/uploads/2020/02/Stray-Kids-Logo.png" alt="skz-logo" height="95px" width="250px"/>
         </div>

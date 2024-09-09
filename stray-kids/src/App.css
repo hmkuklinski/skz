@@ -10,6 +10,7 @@ li, a, button {
   font-weight:500px;
   color: #3b98af;
   text-decoration:none;
+  text-align: center;
 }
 
 ul {
@@ -316,7 +317,7 @@ body {
 }
 
 /* ------------albums formatting --------------------*/
-.albums-container, .album-container, .albums,.album-cover, 
+.albums-container, .album-container,.album-cover, 
 .filter-menu,.album-info, .albums-main-container, .menu-option,
 .preview-container {
   display:flex;
@@ -337,6 +338,9 @@ body {
 
 .album-cover, .album-info, .albums-container{
   margin-top: 0;
+}
+.albums-container{
+  width: 95%;
 }
 
 /* for the Albums label and filter selection buttons*/
@@ -379,21 +383,22 @@ body {
 
 /*div container for all the albums*/
 .albums{
-  flex-direction: row;
-  flex-wrap: wrap;
+  display:inline-flex;
+  padding: 16px 8px;
+  height: 400px;
+  overflow-x:scroll;
+  overflow-y:hidden;
   width: 95%;
-  margin-top: 20px;
-  padding: 6px;
 }
 /*div container for each album*/
 .album-container{
   border-radius: 12px;
   border: 1px solid gray;
-  width: 260px;
+  width: 280px;
   box-shadow: 7px 4px 4px;
-  height: 350px;
+  height: 300px;
   padding: 2px 8px;
-  margin:10px;
+  margin:12px;
   cursor: pointer;
 }
 /*for album cover image div and img*/
@@ -420,11 +425,10 @@ body {
   width: 85%;
 }
 .album-year{
-  font-size: 10px;
+  font-size: 16px;
   width: 100px;
   text-align: center;
   margin: 0px 15px;
-  background-color: pink;
 }
 /* when view-album button is present --> check if want to keep
 .album-year, .view-album{
@@ -437,23 +441,66 @@ body {
 
 /*------------------------album preview/additional info section -----------*/
 .preview-container{ /*for both album info and album cover and title*/
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   display:flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  width: 90%;
-  height: 700px;
+  width: 95%;
+  height: 600px;
   margin-top: 10px;
-  
+  border-radius:12px;
 }
 /*left == song info and .album-preview-container is for album cover and title display on right*/
 .left, .album-preview-container{
-  width: 45%;
+  width: 55%;
   min-height: 450px;
-  max-height: 650px;
-  margin: 10px;
+  max-height: 570px;
+  margin: 15px;
   padding: 7px;
+}
+.album-preview-container{
+  width: 35%;
+}
+.albums-main{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: row;
+  width: 95%;
+  padding: 4px;
+  margin-top: 30px;
+}
+.prev, .next{
+  margin: 0px 8px;
+  padding: 5px;
+}
+
+.left{
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  margin: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8badbb; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8f8f8f; 
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 /*for album title*/
 .info-title{
@@ -470,7 +517,7 @@ body {
   height: 35px;
   font-size: 21px;
   text-align: center;
-  background-color: #969696;
+  background-color: rgba(150, 150, 150, 0.4);
   margin: 10px 0px;
   cursor:pointer;
 }
@@ -496,14 +543,21 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-.preview-cover, .preview-cover img{
+.preview-cover{
   height: 90%;
   width: 80%;
   margin: 12px 15px;
 }
-.info-title h3{
-  font-size: 32px;
+.preview-cover img{
+  height: 420px;
+  width:auto;
+  min-width: 150px;
+  max-height: 450px;
 }
+.info-title h1{
+  font-size: 30px;
+}
+
 
 
 
@@ -572,12 +626,34 @@ body {
   .preview-container{
     flex-direction: column;
     height: auto;
-    margin: 15px 2px;
   }
   .left, .album-preview-container{
     width: 90%;
     height: auto;
     padding: 10px;
     margin: 15px;
+  }
+  .albums-main-container{
+    width: 95%;
+  }
+  .song-container{
+    height: 120px;
+  }
+  .preview-cover img{
+    width: 90%;
+    height: auto;
+  }
+  .prev, .next{
+    display:none;
+  }
+  .albums{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    padding: 16px 8px;
+    height: auto;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    width: 100%;
   }
 }
