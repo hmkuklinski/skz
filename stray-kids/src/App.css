@@ -517,7 +517,7 @@ body {
   height: 35px;
   font-size: 21px;
   text-align: center;
-  background-color: rgba(150, 150, 150, 0.4);
+  background-color: rgba(150, 150, 150, 0.5);
   margin: 10px 0px;
   cursor:pointer;
 }
@@ -556,6 +556,28 @@ body {
 }
 .info-title h1{
   font-size: 30px;
+}
+
+.lyrics{
+  margin-top: 15px;
+  text-align: center;
+  font-size: 22px;
+  padding: 5px;
+  word-spacing: 0.5;
+  line-height: 1.8;
+  height: 90%;
+  overflow-y: scroll;
+}
+.lyrics-container h1{
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: underline;
+}
+.exit{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
 }
 
 
