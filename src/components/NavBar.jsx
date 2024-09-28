@@ -10,7 +10,7 @@ export default function NavBar(){
         <li><Link to="/">Home</Link></li>
         <li><Link to="/music">Music</Link></li>
         <li><Link to="/news">News</Link></li>
-        <li><Link to="/photocards">Photocards</Link></li>
+        {/* <li><Link to="/photocards">Photocards</Link></li> */}
       </ul>
     </nav>
   );
