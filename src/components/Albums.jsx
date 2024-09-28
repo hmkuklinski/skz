@@ -1,6 +1,6 @@
 import Layout from "./Layout";
 import Album from "../Album";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import AlbumPreview from "../AlbumPreview";
 import AlbumInfo from "../AlbumInfo";
 import Lyrics from "../Lyrics";
@@ -438,11 +438,25 @@ export default function Albums(){
 
     const [selectedSong, setSelectedSong]= useState(null);
     const [songSelected, setSongSelected]= useState(false); //for showing lyrics 
+
+    const [isPreviewVisible, setPreviewVisible] = useState(true);
+    const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 850);
+
+    // Monitor window resizing
+    useEffect(() => {
+        const handleResize = () => {
+            setIsLargeScreen(window.innerWidth > 850);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
     
     //for clicking on the album from album card:
     const handleChange=(album)=>{
         setPreviewAlbum(album);
         hideLyrics();
+        setPreviewVisible(true);
     }
     const showLyrics = (song) => {
         setSelectedSong(song);
@@ -467,9 +481,19 @@ export default function Albums(){
 
     }
 
+    const togglePreview = () => {
+        setPreviewVisible(!isPreviewVisible);
+    };
+
     //layout for the preview card:
     const standardPreview = (
         <div className="preview-container" id="previews"  style={{border:`5px solid ${previewAlbum.color}`}}>
+            {songSelected? 
+             <div className="exit">
+                    <div className="btn-exit" onClick={() => hideLyrics()}>
+                        <ion-icon name="close" size="large"></ion-icon>
+                    </div>
+            </div>:""}
             <div className="left">
                 {!songSelected && <AlbumInfo {...previewAlbum} showLyrics={showLyrics} />}
                 {songSelected && selectedSong && (
@@ -477,6 +501,23 @@ export default function Albums(){
                 )}
             </div>
             {previewAlbum&& <AlbumPreview {...previewAlbum} songSelected={songSelected}/>}
+        </div>
+    );
+    const smallerPreview = (
+        <div className="preview-container" id="previews"  style={{border:`5px solid ${previewAlbum.color}`}}>
+            {isPreviewVisible? <div className="hide-preview" onClick={()=>{if (songSelected) {hideLyrics();} else {togglePreview();}}}>
+                <ion-icon name="close" size="large"></ion-icon> 
+            </div>: ""}
+            {previewAlbum&& 
+            <div className="preview-cover">
+                <img src={previewAlbum.imgSrc} alt={previewAlbum.name} />
+            </div>}
+            <div className="left">
+                {!songSelected && <AlbumInfo {...previewAlbum} showLyrics={showLyrics} />}
+                {songSelected && selectedSong && (
+                    <Lyrics lyrics={selectedSong.lyrics} name={selectedSong.title} closeLyrics={hideLyrics} />
+                )}
+            </div>
         </div>
     );
     //for the filter options:
@@ -496,11 +537,11 @@ export default function Albums(){
     return (
         <Layout>
             <div className="albums-main-container">
-                <div className="albums-main">
-                    {standardPreview}
-                </div>
+                {isPreviewVisible?<div className="albums-main">
+                    {isLargeScreen?standardPreview:smallerPreview}
+                </div>: ""}
                 {filter}
-                <div className="filter-info">
+                <div className="filter-info" style={{ marginTop: !isPreviewVisible ? "70px" : "10px" }}>
                     Select an album to view more information about it
                 </div>
                 <div className="albums-container">

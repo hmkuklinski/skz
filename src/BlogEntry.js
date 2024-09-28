@@ -13,7 +13,7 @@ export default function BlogEntry({title,date, sub, prev, imgsrc, article}){
                 
                 <div className="blog-text">
                     <span>{fullDate} | {subTitle}</span>
-                    <a target="_blank" href={articleLink} className="blog-title">{blogTitle}</a>
+                    <a target="_blank" rel="noreferrer" href={articleLink} className="blog-title">{blogTitle}</a>
                     <div className="line"></div>
                     <p>{prev}</p>
                     <div className="blog-link">
