@@ -15,7 +15,7 @@ export default function Blog(){
               sub={"Hannah Kuklinski"}
             />
             <BlogEntry 
-              imgsrc={"https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1oPqIV.img?w=768&h=575&m=6&x=225&y=76&s=821&d=373"}
+              imgsrc={"https://hallyureviews.wordpress.com/wp-content/uploads/2024/07/stray-kids-.png"}
               title={"Stray Kids Win ShowChampion Award with Chk Chk Boom"}
               date={"August 16th, 2024"}
               prev={"Stray Kids received Show Champion's Song Award for their title track Chk Chk Boom. It is their 3rd straight win on Show Champion."}
