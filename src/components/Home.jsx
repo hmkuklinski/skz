@@ -216,6 +216,23 @@ export default function Home(){
                 )
               })}
             </div>
+            <div className="menu-smaller">
+              {members.map((member, index) => {
+                const name = member.name.toLowerCase()
+                const isActive = name === currentMember
+
+                return (
+                  <div className={isActive ? "menu-member": "menu-member-inactive"} key={index}>
+                    <img
+                      src={member.thumbnail}
+                      alt={name}
+                      onClick={(event) => setCurrentMember(name)}
+                    />
+                  </div>
+                )
+              })}
+            </div>
+
           </div>
         </Layout>
       );

@@ -189,6 +189,11 @@ body {
   width: 70px;
   border-radius: 50%;
 }
+.menu-smaller img{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
 .menu-member, .menu-member-inactive{
   margin: 0px 15px;
   padding: 3px;
@@ -210,6 +215,15 @@ body {
   font-size: 16px;
   background-color: rgba(255, 255, 255, 0.24);
   border-radius: 12px;
+}
+
+.menu-smaller{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 85%;
+  overflow-x:scroll;
 }
 
 /* ------------------blog editing----------------------------*/
