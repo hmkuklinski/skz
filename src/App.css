@@ -218,7 +218,7 @@ body {
 }
 
 .menu-smaller{
-  display:flex;
+  display:none;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
@@ -680,6 +680,9 @@ body {
   }
   .menu{
     display:none;
+  }
+  .menu-smaller{
+    display:flex;
   }
   .member-info{
     width: 90%;
