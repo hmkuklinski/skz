@@ -460,7 +460,7 @@ body {
   padding: 7px;
 }
 .album-preview-container{
-  width: 35%;
+  width: 50%;
 }
 .albums-main{
   display:flex;
@@ -479,9 +479,11 @@ body {
 .left{
   overflow-y: scroll;
 }
+
+/*--------------------scrollbar-------------------------------*/
 ::-webkit-scrollbar {
   width: 5px;
-  height: 8px;
+  height: 10px;
   margin: 5px;
 }
 
@@ -491,7 +493,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8badbb; 
+  background: rgba(139, 173, 187, 0.1); 
   border-radius: 10px;
 }
 
@@ -502,6 +504,11 @@ body {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+
+/*----------------------------------------------------------------*/
+
+
 /*for album title*/
 .info-title{
   margin: 6px 0px;
@@ -513,8 +520,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  width: 100%;
-  height: 35px;
+  width: 98%;
+  height: 55px;
   font-size: 21px;
   text-align: center;
   background-color: rgba(150, 150, 150, 0.5);
@@ -559,7 +566,7 @@ body {
 }
 
 .lyrics{
-  margin-top: 15px;
+  margin-top: 4px;
   text-align: center;
   font-size: 22px;
   padding: 5px;
@@ -577,7 +584,6 @@ body {
   display:flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0px;
 }
 
 
@@ -596,7 +602,7 @@ body {
   }
 }
 
-@media (max-width: 800px){
+@media (max-width: 900px){
   .skz-logo, .member-image{
     display:none;
   }
@@ -670,6 +676,8 @@ body {
   }
   .albums{
     display:flex;
+    align-items: center;
+    justify-content: center;
     flex-direction:row;
     flex-wrap:wrap;
     padding: 16px 8px;
