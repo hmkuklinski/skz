@@ -490,7 +490,8 @@ body {
   display:flex;
   position: relative;
   bottom: 250px;
-  left:40%;
+  left:48%;
+  cursor:pointer;
 }
 .hide-preview, .exit{
   color: #e32636;
@@ -631,12 +632,16 @@ body {
   line-height: 1.8;
   height: 90%;
   overflow-y: scroll;
+  margin-top: 2px;
 }
 .lyrics-container h1{
   text-align: center;
   text-decoration: underline;
-  padding: 8px;
-  font-size: 26px;
+  padding: 18px;
+  font-size: 27px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 .exit{
   display:flex;
