@@ -27,7 +27,7 @@ export default function Home(){
           players3:"https://www.youtube.com/watch?v=b4zq-KJLUf0",
           playersImg3: "https://i.ytimg.com/vi/b4zq-KJLUf0/maxresdefault.jpg",
           skzoo: "https://i.pinimg.com/originals/08/78/c3/0878c34107194977ec472edaade5a775.jpg",
-          backgroundImage: "https://kpopping.com/documents/09/2/230525-Stray-Kids-Bang-Chan-Photoshoot-by-NAVER-x-Dispatch-documents-3.jpeg?v=4bf12",
+          backgroundImage: "https://www.soup.io/wp-content/uploads/2024/05/bangchan_.jpeg",
           thumbnail: "https://i.pinimg.com/originals/b7/4f/e6/b74fe630995665067f8088b2472ce245.png",
         },
         {
