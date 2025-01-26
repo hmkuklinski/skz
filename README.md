@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Project STAY
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/user-attachments/assets/cec86921-a128-4c2c-857f-3dc91f7321c0)
 
-## Available Scripts
+Explore the greatest Korean pop sensation, Stray Kids! This is a web application with many awesome features that allows STAYs to learn more about the group through:
+<br>
+* informative member cards (exploring their individual projects or songs, learning their birthdays, group positions, social media pages, or interests)
+* their discography (with full album set lists and lyrics! There is also a cool filter that lets you explore their releases yearly)
+* their recent accomplishments or announcements (group wins, concerts, album releases, fanmeets, etc...)
 
-In the project directory, you can run:
+<hr>
 
-### `npm start`
+## The Thumbnails:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![image](https://github.com/user-attachments/assets/dca0bb07-0092-4c61-afe1-f2b268073ae6)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### What are these?
+These are thumbnails that have links to a member's individual projects! This can include solo songs, dance performances, or rap tracks. Simply click on the thumbnail you'd like to explore! (no worries, it will open up in a new window).
 
-### `npm test`
+## How Do I Explore the Other Members?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://github.com/user-attachments/assets/7c2f8849-0da2-4d85-8c9a-79d56e689989)
 
-### `npm run build`
+This is the navigation bar! The navigation bar is located on the Home page directly below the member card. The current member's photo will always be displayed in the navigation bar in color. To learn about another member, simply click on another member's photo that is in black and white. Once you click on them, their information card will be displayed above! :D
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<hr> 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Explore Discography
+![image](https://github.com/user-attachments/assets/5463466a-63ea-42d8-815d-141cd69e36b8)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The album cards show useful information about each album released. It has a tracklist with each song and runtime on the left, along with the album title and cover on the right. 
+In the case that you want to explore what each song is about, no worries!
 
-### `npm run eject`
+### Get the Lyrics
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![image](https://github.com/user-attachments/assets/39dcf70b-0372-4c36-ba6b-4327d8f6d41c)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Simply click on the song to see the lyrics! When you are done, simply click the red X in the top right hand corner of the lyric box.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Exploring Other Albums
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![image](https://github.com/user-attachments/assets/492f30de-5ffb-46d3-b837-eaacf6485f69)
 
-## Learn More
+Below the album card, you will see a section that has small album cards, with the album title and cover. Simply click on the one that you'd like to see.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ON WEB: All of the albums will not be visible immediately. To see more, simply scroll to the right.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Filtering by Year
 
-### Code Splitting
+Right above these album cards, there are multiple buttons that have the years that Stray Kids were active. Simply click a year to display relevant albums.
+The default setting will show their entire discography from 2018 onwards.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<hr> 
 
-### Analyzing the Bundle Size
+## News
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![image](https://github.com/user-attachments/assets/672819ce-42d2-4974-b748-10ec25bb0b77)
 
-### Making a Progressive Web App
+This section shows the recent news. Simply click on "Read Article" to learn more! 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<hr>
